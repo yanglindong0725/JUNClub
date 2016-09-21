@@ -1,0 +1,51 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,hr,input,form,table,td,a,p,textarea,img,span {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 12px;
+}
+
+ol,ul,li {
+  list-style: none;
+}
+
+/*去除下划线*/
+a {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+}
+
+input,select,textarea {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+/*清除浮动*/
+.clearfloat {
+  zoom: 1;
+}
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+/* 字体 */
+@font-face {
+  font-family: sc; src: url("../fonts/SentyChalk.ttf");
+}
+@font-face {
+  font-family: pfht; src: url("../fonts/苹方黑体-极细-简.ttf");
+}
+@font-face {
+  font-family: hxb; src: url("../fonts/胡晓波美心常规体.ttf");
+}

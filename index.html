@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="Dong">
+  <!--开启对web app的支持-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!--主要是正对苹果手机将数字自动识别为号码-->
+  <meta name="format-detection" content="telephone=no" />
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <!-- qq浏览器 -->
+  <meta name="x5-fullscreen" content="true">
+  <meta name="x5-orientation" content="portrait">
+  <meta id="eqMobileViewport" name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script>
+    var g = document.documentElement.clientWidth / 320;
+    document.getElementById('eqMobileViewport').setAttribute("content", "width=320, initial-scale=" + g + ", maximum-scale=" + g + ", user-scalable=no")
+  </script>
+
+  <title>江南大学社团介绍</title>
+
+  <!-- Bootstrap -->
+  <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+  <link href="css/jquery.fullpage.min.css" rel="stylesheet">
+  <!-- 自定义样式 -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/reset.css" rel="stylesheet">
+</head>
+  <body>
+    <div id="fullpage">
+      <div class="section s1">
+        <div class="bg1">
+          <div class="container-jn">
+            <img class="jn" src="images/JN-un.png">
+            <img class="assn" src="images/assn.png">
+          </div>
+          <div class="container">
+            <img class="skate-img" src="images/skateboard.png">
+          </div>
+          <img class="colors" src="images/colors.png">
+        </div>
+      </div>
+      <div class="section s2">
+        <div class="bg2">
+          <div class="container">
+            <img id="dance" src="images/dance.png">
+            <img id="zhaoxin" src="images/zx.png">
+            <img id="hand" src="images/hand.png">
+          </div>
+          <div class="container">
+            <img id="roller" src="images/roller.png">
+            <img id="rollerr" src="images/rollerr.png">
+          </div>
+          <div class="text">
+            <p >社团纷杂不知如何选择？</p>
+            <P >信息太少不清楚各部门职能？</P>
+          </div>
+        </div>
+      </div>
+      <div class="section s3">
+        <div class="container">
+          <img id="youth" src="images/youth.png">
+        </div>
+        <div class="img-container">
+          <img src="images/mon.png">
+        </div>
+      </div>
+      <div class="section s4">
+        <div class="img-container-weixin">
+          <img id="weixin" src="images/w.png">
+          <img id="barcode" src="images/guaguaka_qrcode.png">
+          <p >长按二维码关注江南小mon!</p>
+        </div>
+        <div class="go-container">
+          <a href="class.html"><img src="images/go.png"></a>
+        </div>
+        <p id="end" >小mon带你走进江大社团</p>
+      </div>
+    </div>
+    <div class="footer">
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <script src="js/jquery.fullpage.min.js"></script>
+    <script src="js/jquery.easings.min.js"></script>
+    <script src="js/move.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#fullpage').fullpage({
+          verticalCentered:false,
+          navigation:true,
+          scrollOverflow:true,
+          anchors:['page1','page2','page3','page4'],
+
+          afterLoad: function (link, index) {
+            switch (index) {
+              case 1:
+                move('.s1 .jn').set('margin-top','40px').end();
+                move('.s1 .assn').set('margin-top','65%').end();
+                move('.s1 .jn').scale(0.8).end();
+                move('.s1 .assn').scale(1.1).end();
+                move('.s1 .colors').ease('in').x(40).end();
+                move('.s1 .skate-img').scale(0.6).end();
+                break;
+              case 2:
+                move('.s2 #dance').set('margin-top','50%').end();
+                move('.s2 #dance').scale(1.4).end();
+                move('.s2 #hand').rotate(780).end();
+                move('.s2 #roller').x(60).y(20).end();
+                move('.s2 #rollerr').x(-10).y(-160).end();
+                break;
+              case 3:
+                move('.s3 .img-container img').scale(0.8).end();
+                break;
+              case 4:
+                move('.s4 .go-container img').scale(1.2).end();
+                break;
+              default:
+                break;
+            }
+          },
+          onLeave:function (link,index) {
+            switch (index) {
+              case 1:
+                move('.s1 .jn').set('margin-bottom','50px').end();
+                move('.s1 .assn').set('margin-top','200px').end();
+                move('.s1 .jn').scale(1).end();
+                move('.s1 .assn').scale(1).end();
+                move('.s1 .colors').ease('in').x(0).end();
+                move('.s1 .skate-img').scale(1).end();
+                break;
+              case 2:
+                move('.s2 #dance').set('margin-top','40px').end();
+                move('.s2 #dance').scale(1).end();
+                move('.s2 #hand').rotate(0).end();
+                move('.s2 #roller').x(0).y(0).end();
+                move('.s2 #rollerr').x(0).y(0).end();
+                break;
+              case 3:
+                move('.s3 .img-container img').scale(1).end();
+                break;
+              case 4:
+                move('.s4 .go-container img').scale(1).end();
+                break;
+              default:
+                break;
+            }
+
+          },
+          afterRender:function () {
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

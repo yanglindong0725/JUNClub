@@ -1,0 +1,38 @@
+body {
+  font-family: pfht;
+}
+.play {
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.panel-footer img {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.footer {
+  width: auto;
+  height: 80px;
+  background-color: #122b40;
+}
+
+.footer p {
+  font-family: pfht;
+  font-size: 10px;
+  text-align: center;
+  line-height: 80px;
+  color: #fff;
+}
+
+.footer a {
+  font-size: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:link,
+.footer a:visited {
+  font-size: 10px;
+  color: #fff;
+}
